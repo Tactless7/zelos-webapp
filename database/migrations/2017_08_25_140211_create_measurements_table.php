@@ -15,16 +15,16 @@ class CreateMeasurementsTable extends Migration
     {
         Schema::create('measurements', function (Blueprint $table) {
           $table->increments('id');
-          $table->float('waist', 8, 2);
-          $table->float('hips', 8, 2);
-          $table->float('breasts', 8, 2);
-          $table->float('under_breasts', 8, 2);
-          $table->float('thigh_left', 8, 2);
-          $table->float('thigh_right', 8, 2);
-          $table->float('arm_left', 8, 2);
-          $table->float('arm_right', 8, 2);
-          $table->float('calf_left', 8, 2);
-          $table->float('calf_right', 8, 2);
+          $table->integer('waist')->unsigned();
+          $table->integer('hips')->unsigned();
+          $table->integer('breasts')->unsigned();
+          $table->integer('under_breasts')->unsigned();
+          $table->integer('thigh_left')->unsigned();
+          $table->integer('thigh_right')->unsigned();
+          $table->integer('arm_left')->unsigned();
+          $table->integer('arm_right')->unsigned();
+          $table->integer('calf_left')->unsigned();
+          $table->integer('calf_right')->unsigned();
           $table->date('date');
           $table->timestamps();
         });
